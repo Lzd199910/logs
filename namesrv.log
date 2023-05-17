@@ -1,60 +1,49 @@
-2023-05-17 19:22:15 INFO ShutdownHook - shutdown hook was invoked, 1 times.
-2023-05-17 19:22:15 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[192.168.31.1:25410]
-2023-05-17 19:22:15 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[192.168.31.1:25410]
-2023-05-17 19:22:15 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[192.168.31.1:25412]
-2023-05-17 19:22:15 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[192.168.31.1:25412]
-2023-05-17 19:22:15 INFO ShutdownHook - shutdown thread NettyEventExecutor interrupt false
-2023-05-17 19:22:18 INFO NettyEventExecutor - NettyEventExecutor service end
-2023-05-17 19:22:18 INFO ShutdownHook - join thread NettyEventExecutor elapsed time(ms) 2926 90000
-2023-05-17 19:22:18 INFO ShutdownHook - Try to shutdown service thread:FileWatchService started:true lastThread:Thread[FileWatchService,5,main]
-2023-05-17 19:22:18 INFO ShutdownHook - shutdown thread FileWatchService interrupt false
-2023-05-17 19:22:18 INFO FileWatchService - FileWatchService service end
-2023-05-17 19:22:18 INFO ShutdownHook - join thread FileWatchService elapsed time(ms) 4 90000
-2023-05-17 19:22:18 INFO ShutdownHook - shutdown hook done, consuming time total(ms): 3018
-2023-05-17 19:26:07 INFO main - rocketmqHome=/usr/local/rocketmq
-2023-05-17 19:26:07 INFO main - kvConfigPath=/home/rocketmq/namesrv/kvConfig.json
-2023-05-17 19:26:07 INFO main - configStorePath=/usr/local/rocketmq/conf/producer.properties
-2023-05-17 19:26:07 INFO main - productEnvName=center
-2023-05-17 19:26:07 INFO main - clusterTest=false
-2023-05-17 19:26:07 INFO main - orderMessageEnable=false
-2023-05-17 19:26:07 INFO main - listenPort=9876
-2023-05-17 19:26:07 INFO main - serverWorkerThreads=8
-2023-05-17 19:26:07 INFO main - serverCallbackExecutorThreads=0
-2023-05-17 19:26:07 INFO main - serverSelectorThreads=3
-2023-05-17 19:26:07 INFO main - serverOnewaySemaphoreValue=256
-2023-05-17 19:26:07 INFO main - serverAsyncSemaphoreValue=64
-2023-05-17 19:26:07 INFO main - serverChannelMaxIdleTimeSeconds=120
-2023-05-17 19:26:07 INFO main - serverSocketSndBufSize=65535
-2023-05-17 19:26:07 INFO main - serverSocketRcvBufSize=65535
-2023-05-17 19:26:07 INFO main - serverPooledByteBufAllocatorEnable=true
-2023-05-17 19:26:07 INFO main - useEpollNativeSelector=false
-2023-05-17 19:26:07 INFO main - Server is running in TLS permissive mode
-2023-05-17 19:26:07 INFO main - Tls config file doesn't exist, skip it
-2023-05-17 19:26:07 INFO main - Log the final used tls related configuration
-2023-05-17 19:26:07 INFO main - tls.test.mode.enable = true
-2023-05-17 19:26:07 INFO main - tls.server.need.client.auth = none
-2023-05-17 19:26:07 INFO main - tls.server.keyPath = null
-2023-05-17 19:26:07 INFO main - tls.server.keyPassword = null
-2023-05-17 19:26:07 INFO main - tls.server.certPath = null
-2023-05-17 19:26:07 INFO main - tls.server.authClient = false
-2023-05-17 19:26:07 INFO main - tls.server.trustCertPath = null
-2023-05-17 19:26:07 INFO main - tls.client.keyPath = null
-2023-05-17 19:26:07 INFO main - tls.client.keyPassword = null
-2023-05-17 19:26:07 INFO main - tls.client.certPath = null
-2023-05-17 19:26:07 INFO main - tls.client.authServer = false
-2023-05-17 19:26:07 INFO main - tls.client.trustCertPath = null
-2023-05-17 19:26:07 INFO main - Using OpenSSL provider
-2023-05-17 19:26:08 INFO main - SSLContext created for server
-2023-05-17 19:26:08 INFO main - Try to start service thread:FileWatchService started:false lastThread:null
-2023-05-17 19:26:08 INFO NettyEventExecutor - NettyEventExecutor service started
-2023-05-17 19:26:08 INFO main - The Name Server boot success. serializeType=JSON
-2023-05-17 19:26:08 INFO FileWatchService - FileWatchService service started
-2023-05-17 19:26:15 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 192.168.31.1:25664
-2023-05-17 19:26:15 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[192.168.31.1:25664]
-2023-05-17 19:26:18 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 192.168.31.1:25666
-2023-05-17 19:26:18 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[192.168.31.1:25666]
-2023-05-17 19:26:54 WARN NettyServerCodecThread_2 - NETTY SERVER PIPELINE: exceptionCaught 192.168.31.1:25666
-2023-05-17 19:26:54 WARN NettyServerCodecThread_2 - NETTY SERVER PIPELINE: exceptionCaught exception.
+2023-05-17 20:54:23 INFO main - rocketmqHome=/usr/local/rocketmq
+2023-05-17 20:54:23 INFO main - kvConfigPath=/home/rocketmq/namesrv/kvConfig.json
+2023-05-17 20:54:23 INFO main - configStorePath=/usr/local/rocketmq/conf/producer.properties
+2023-05-17 20:54:23 INFO main - productEnvName=center
+2023-05-17 20:54:23 INFO main - clusterTest=false
+2023-05-17 20:54:23 INFO main - orderMessageEnable=false
+2023-05-17 20:54:23 INFO main - listenPort=9876
+2023-05-17 20:54:23 INFO main - serverWorkerThreads=8
+2023-05-17 20:54:23 INFO main - serverCallbackExecutorThreads=0
+2023-05-17 20:54:23 INFO main - serverSelectorThreads=3
+2023-05-17 20:54:23 INFO main - serverOnewaySemaphoreValue=256
+2023-05-17 20:54:23 INFO main - serverAsyncSemaphoreValue=64
+2023-05-17 20:54:23 INFO main - serverChannelMaxIdleTimeSeconds=120
+2023-05-17 20:54:23 INFO main - serverSocketSndBufSize=65535
+2023-05-17 20:54:23 INFO main - serverSocketRcvBufSize=65535
+2023-05-17 20:54:23 INFO main - serverPooledByteBufAllocatorEnable=true
+2023-05-17 20:54:23 INFO main - useEpollNativeSelector=false
+2023-05-17 20:54:23 INFO main - Server is running in TLS permissive mode
+2023-05-17 20:54:23 INFO main - Tls config file doesn't exist, skip it
+2023-05-17 20:54:23 INFO main - Log the final used tls related configuration
+2023-05-17 20:54:23 INFO main - tls.test.mode.enable = true
+2023-05-17 20:54:23 INFO main - tls.server.need.client.auth = none
+2023-05-17 20:54:23 INFO main - tls.server.keyPath = null
+2023-05-17 20:54:23 INFO main - tls.server.keyPassword = null
+2023-05-17 20:54:23 INFO main - tls.server.certPath = null
+2023-05-17 20:54:23 INFO main - tls.server.authClient = false
+2023-05-17 20:54:23 INFO main - tls.server.trustCertPath = null
+2023-05-17 20:54:23 INFO main - tls.client.keyPath = null
+2023-05-17 20:54:23 INFO main - tls.client.keyPassword = null
+2023-05-17 20:54:23 INFO main - tls.client.certPath = null
+2023-05-17 20:54:23 INFO main - tls.client.authServer = false
+2023-05-17 20:54:23 INFO main - tls.client.trustCertPath = null
+2023-05-17 20:54:23 INFO main - Using OpenSSL provider
+2023-05-17 20:54:24 INFO main - SSLContext created for server
+2023-05-17 20:54:24 INFO main - Try to start service thread:FileWatchService started:false lastThread:null
+2023-05-17 20:54:24 INFO NettyEventExecutor - NettyEventExecutor service started
+2023-05-17 20:54:24 INFO main - The Name Server boot success. serializeType=JSON
+2023-05-17 20:54:24 INFO FileWatchService - FileWatchService service started
+2023-05-17 20:54:36 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 192.168.31.1:29764
+2023-05-17 20:54:36 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[192.168.31.1:29764]
+2023-05-17 20:54:50 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 192.168.31.1:29773
+2023-05-17 20:54:50 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[192.168.31.1:29773]
+2023-05-17 20:55:24 INFO NSScheduledThread1 - --------------------------------------------------------
+2023-05-17 20:55:24 INFO NSScheduledThread1 - configTable SIZE: 0
+2023-05-17 20:57:30 WARN NettyServerCodecThread_1 - NETTY SERVER PIPELINE: exceptionCaught 192.168.31.1:29764
+2023-05-17 20:57:30 WARN NettyServerCodecThread_1 - NETTY SERVER PIPELINE: exceptionCaught exception.
 java.io.IOException: Connection reset by peer
 	at sun.nio.ch.FileDispatcherImpl.read0(Native Method) ~[na:1.8.0_171]
 	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39) ~[na:1.8.0_171]
@@ -71,15 +60,11 @@ java.io.IOException: Connection reset by peer
 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:451) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
 	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140) [netty-all-4.0.42.Final.jar:4.0.42.Final]
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
-2023-05-17 19:26:54 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[192.168.31.1:25666]
-2023-05-17 19:26:54 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[192.168.31.1:25666]
-2023-05-17 19:26:54 INFO NettyServerNIOSelector_3_2 - closeChannel: close the connection to remote address[192.168.31.1:25666] result: true
-2023-05-17 19:26:58 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 192.168.31.1:25714
-2023-05-17 19:26:58 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[192.168.31.1:25714]
-2023-05-17 19:27:08 INFO NSScheduledThread1 - --------------------------------------------------------
-2023-05-17 19:27:08 INFO NSScheduledThread1 - configTable SIZE: 0
-2023-05-17 19:27:09 WARN NettyServerCodecThread_1 - NETTY SERVER PIPELINE: exceptionCaught 192.168.31.1:25664
-2023-05-17 19:27:09 WARN NettyServerCodecThread_1 - NETTY SERVER PIPELINE: exceptionCaught exception.
+2023-05-17 20:57:30 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[192.168.31.1:29764]
+2023-05-17 20:57:30 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[192.168.31.1:29764]
+2023-05-17 20:57:30 INFO NettyServerNIOSelector_3_1 - closeChannel: close the connection to remote address[192.168.31.1:29764] result: true
+2023-05-17 20:57:34 WARN NettyServerCodecThread_2 - NETTY SERVER PIPELINE: exceptionCaught 192.168.31.1:29773
+2023-05-17 20:57:34 WARN NettyServerCodecThread_2 - NETTY SERVER PIPELINE: exceptionCaught exception.
 java.io.IOException: Connection reset by peer
 	at sun.nio.ch.FileDispatcherImpl.read0(Native Method) ~[na:1.8.0_171]
 	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39) ~[na:1.8.0_171]
@@ -96,187 +81,10 @@ java.io.IOException: Connection reset by peer
 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:451) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
 	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140) [netty-all-4.0.42.Final.jar:4.0.42.Final]
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
-2023-05-17 19:27:09 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[192.168.31.1:25664]
-2023-05-17 19:27:09 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[192.168.31.1:25664]
-2023-05-17 19:27:09 INFO NettyServerNIOSelector_3_1 - closeChannel: close the connection to remote address[192.168.31.1:25664] result: true
-2023-05-17 19:27:17 WARN NettyServerCodecThread_3 - NETTY SERVER PIPELINE: exceptionCaught 192.168.31.1:25714
-2023-05-17 19:27:17 WARN NettyServerCodecThread_3 - NETTY SERVER PIPELINE: exceptionCaught exception.
-java.io.IOException: Connection reset by peer
-	at sun.nio.ch.FileDispatcherImpl.read0(Native Method) ~[na:1.8.0_171]
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39) ~[na:1.8.0_171]
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_171]
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_171]
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_171]
-	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:221) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:899) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:275) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:652) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:575) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:489) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:451) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140) [netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
-2023-05-17 19:27:17 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[192.168.31.1:25714]
-2023-05-17 19:27:17 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[192.168.31.1:25714]
-2023-05-17 19:27:17 INFO NettyServerNIOSelector_3_3 - closeChannel: close the connection to remote address[192.168.31.1:25714] result: true
-2023-05-17 19:27:19 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 192.168.31.1:25742
-2023-05-17 19:27:19 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[192.168.31.1:25742]
-2023-05-17 19:27:22 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 192.168.31.1:25748
-2023-05-17 19:27:22 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[192.168.31.1:25748]
-2023-05-17 19:37:08 INFO NSScheduledThread1 - --------------------------------------------------------
-2023-05-17 19:37:08 INFO NSScheduledThread1 - configTable SIZE: 0
-2023-05-17 19:40:10 INFO ShutdownHook - shutdown hook was invoked, 1 times.
-2023-05-17 19:40:10 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[192.168.31.1:25742]
-2023-05-17 19:40:10 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[192.168.31.1:25742]
-2023-05-17 19:40:10 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[192.168.31.1:25748]
-2023-05-17 19:40:10 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[192.168.31.1:25748]
-2023-05-17 19:40:10 INFO ShutdownHook - shutdown thread NettyEventExecutor interrupt false
-2023-05-17 19:40:13 INFO NettyEventExecutor - NettyEventExecutor service end
-2023-05-17 19:40:13 INFO ShutdownHook - join thread NettyEventExecutor elapsed time(ms) 2999 90000
-2023-05-17 19:40:13 INFO ShutdownHook - Try to shutdown service thread:FileWatchService started:true lastThread:Thread[FileWatchService,5,main]
-2023-05-17 19:40:13 INFO ShutdownHook - shutdown thread FileWatchService interrupt false
-2023-05-17 19:40:13 INFO FileWatchService - FileWatchService service end
-2023-05-17 19:40:13 INFO ShutdownHook - join thread FileWatchService elapsed time(ms) 4 90000
-2023-05-17 19:40:13 INFO ShutdownHook - shutdown hook done, consuming time total(ms): 3013
-2023-05-17 20:18:06 INFO main - rocketmqHome=/usr/local/rocketmq
-2023-05-17 20:18:06 INFO main - kvConfigPath=/home/rocketmq/namesrv/kvConfig.json
-2023-05-17 20:18:06 INFO main - configStorePath=/usr/local/rocketmq/conf/producer.properties
-2023-05-17 20:18:06 INFO main - productEnvName=center
-2023-05-17 20:18:06 INFO main - clusterTest=false
-2023-05-17 20:18:06 INFO main - orderMessageEnable=false
-2023-05-17 20:18:06 INFO main - listenPort=9876
-2023-05-17 20:18:06 INFO main - serverWorkerThreads=8
-2023-05-17 20:18:06 INFO main - serverCallbackExecutorThreads=0
-2023-05-17 20:18:06 INFO main - serverSelectorThreads=3
-2023-05-17 20:18:06 INFO main - serverOnewaySemaphoreValue=256
-2023-05-17 20:18:06 INFO main - serverAsyncSemaphoreValue=64
-2023-05-17 20:18:06 INFO main - serverChannelMaxIdleTimeSeconds=120
-2023-05-17 20:18:06 INFO main - serverSocketSndBufSize=65535
-2023-05-17 20:18:06 INFO main - serverSocketRcvBufSize=65535
-2023-05-17 20:18:06 INFO main - serverPooledByteBufAllocatorEnable=true
-2023-05-17 20:18:06 INFO main - useEpollNativeSelector=false
-2023-05-17 20:18:06 INFO main - Server is running in TLS permissive mode
-2023-05-17 20:18:06 INFO main - Tls config file doesn't exist, skip it
-2023-05-17 20:18:06 INFO main - Log the final used tls related configuration
-2023-05-17 20:18:06 INFO main - tls.test.mode.enable = true
-2023-05-17 20:18:06 INFO main - tls.server.need.client.auth = none
-2023-05-17 20:18:06 INFO main - tls.server.keyPath = null
-2023-05-17 20:18:06 INFO main - tls.server.keyPassword = null
-2023-05-17 20:18:06 INFO main - tls.server.certPath = null
-2023-05-17 20:18:06 INFO main - tls.server.authClient = false
-2023-05-17 20:18:06 INFO main - tls.server.trustCertPath = null
-2023-05-17 20:18:06 INFO main - tls.client.keyPath = null
-2023-05-17 20:18:06 INFO main - tls.client.keyPassword = null
-2023-05-17 20:18:06 INFO main - tls.client.certPath = null
-2023-05-17 20:18:06 INFO main - tls.client.authServer = false
-2023-05-17 20:18:06 INFO main - tls.client.trustCertPath = null
-2023-05-17 20:18:07 INFO main - Using OpenSSL provider
-2023-05-17 20:18:08 INFO main - SSLContext created for server
-2023-05-17 20:18:08 INFO main - Try to start service thread:FileWatchService started:false lastThread:null
-2023-05-17 20:18:08 INFO NettyEventExecutor - NettyEventExecutor service started
-2023-05-17 20:18:08 INFO main - The Name Server boot success. serializeType=JSON
-2023-05-17 20:18:08 INFO FileWatchService - FileWatchService service started
-2023-05-17 20:18:09 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 192.168.31.1:28162
-2023-05-17 20:18:09 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[192.168.31.1:28162]
-2023-05-17 20:18:21 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 192.168.31.1:28168
-2023-05-17 20:18:21 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[192.168.31.1:28168]
-2023-05-17 20:19:08 INFO NSScheduledThread1 - --------------------------------------------------------
-2023-05-17 20:19:08 INFO NSScheduledThread1 - configTable SIZE: 0
-2023-05-17 20:21:31 WARN NettyServerCodecThread_2 - NETTY SERVER PIPELINE: exceptionCaught 192.168.31.1:28168
-2023-05-17 20:21:31 WARN NettyServerCodecThread_2 - NETTY SERVER PIPELINE: exceptionCaught exception.
-java.io.IOException: Connection reset by peer
-	at sun.nio.ch.FileDispatcherImpl.read0(Native Method) ~[na:1.8.0_171]
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39) ~[na:1.8.0_171]
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_171]
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_171]
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_171]
-	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:221) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:899) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:275) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:652) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:575) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:489) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:451) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140) [netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
-2023-05-17 20:21:31 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[192.168.31.1:28168]
-2023-05-17 20:21:31 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[192.168.31.1:28168]
-2023-05-17 20:21:31 INFO NettyServerNIOSelector_3_2 - closeChannel: close the connection to remote address[192.168.31.1:28168] result: true
-2023-05-17 20:21:38 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 192.168.31.1:28355
-2023-05-17 20:21:38 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[192.168.31.1:28355]
-2023-05-17 20:21:41 WARN NettyServerCodecThread_1 - NETTY SERVER PIPELINE: exceptionCaught 192.168.31.1:28162
-2023-05-17 20:21:41 WARN NettyServerCodecThread_1 - NETTY SERVER PIPELINE: exceptionCaught exception.
-java.io.IOException: Connection reset by peer
-	at sun.nio.ch.FileDispatcherImpl.read0(Native Method) ~[na:1.8.0_171]
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39) ~[na:1.8.0_171]
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_171]
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_171]
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_171]
-	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:221) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:899) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.buffer.WrappedByteBuf.writeBytes(WrappedByteBuf.java:648) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:275) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:652) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:575) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:489) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:451) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140) [netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
-2023-05-17 20:21:41 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[192.168.31.1:28162]
-2023-05-17 20:21:41 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[192.168.31.1:28162]
-2023-05-17 20:21:41 INFO NettyServerNIOSelector_3_1 - closeChannel: close the connection to remote address[192.168.31.1:28162] result: true
-2023-05-17 20:21:46 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 192.168.31.1:28365
-2023-05-17 20:21:46 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[192.168.31.1:28365]
-2023-05-17 20:21:47 WARN NettyServerCodecThread_3 - NETTY SERVER PIPELINE: exceptionCaught 192.168.31.1:28355
-2023-05-17 20:21:47 WARN NettyServerCodecThread_3 - NETTY SERVER PIPELINE: exceptionCaught exception.
-java.io.IOException: Connection reset by peer
-	at sun.nio.ch.FileDispatcherImpl.read0(Native Method) ~[na:1.8.0_171]
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39) ~[na:1.8.0_171]
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_171]
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_171]
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_171]
-	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:221) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:899) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:275) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:652) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:575) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:489) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:451) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140) [netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
-2023-05-17 20:21:47 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[192.168.31.1:28355]
-2023-05-17 20:21:47 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[192.168.31.1:28355]
-2023-05-17 20:21:47 INFO NettyServerNIOSelector_3_3 - closeChannel: close the connection to remote address[192.168.31.1:28355] result: true
-2023-05-17 20:21:52 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 192.168.31.1:28380
-2023-05-17 20:21:52 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[192.168.31.1:28380]
-2023-05-17 20:29:08 INFO NSScheduledThread1 - --------------------------------------------------------
-2023-05-17 20:29:08 INFO NSScheduledThread1 - configTable SIZE: 0
-2023-05-17 20:34:45 WARN NettyServerCodecThread_5 - NETTY SERVER PIPELINE: exceptionCaught 192.168.31.1:28380
-2023-05-17 20:34:45 WARN NettyServerCodecThread_5 - NETTY SERVER PIPELINE: exceptionCaught exception.
-java.io.IOException: Connection reset by peer
-	at sun.nio.ch.FileDispatcherImpl.read0(Native Method) ~[na:1.8.0_171]
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39) ~[na:1.8.0_171]
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_171]
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_171]
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_171]
-	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:221) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:899) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:275) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:652) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:575) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:489) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:451) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140) [netty-all-4.0.42.Final.jar:4.0.42.Final]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
-2023-05-17 20:34:45 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[192.168.31.1:28380]
-2023-05-17 20:34:45 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[192.168.31.1:28380]
-2023-05-17 20:34:45 INFO NettyServerNIOSelector_3_2 - closeChannel: close the connection to remote address[192.168.31.1:28380] result: true
-2023-05-17 20:34:50 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelRegistered 192.168.31.1:28927
-2023-05-17 20:34:50 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelActive, the channel[192.168.31.1:28927]
-2023-05-17 20:39:08 INFO NSScheduledThread1 - --------------------------------------------------------
-2023-05-17 20:39:08 INFO NSScheduledThread1 - configTable SIZE: 0
+2023-05-17 20:57:34 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[192.168.31.1:29773]
+2023-05-17 20:57:34 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[192.168.31.1:29773]
+2023-05-17 20:57:34 INFO NettyServerNIOSelector_3_2 - closeChannel: close the connection to remote address[192.168.31.1:29773] result: true
+2023-05-17 20:57:35 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 192.168.31.1:29877
+2023-05-17 20:57:35 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[192.168.31.1:29877]
+2023-05-17 20:57:38 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 192.168.31.1:29884
+2023-05-17 20:57:38 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[192.168.31.1:29884]
