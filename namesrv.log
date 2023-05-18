@@ -1,109 +1,98 @@
-2023-05-17 21:29:07,007 WARN RocketmqClient - updateTopicRouteInfoFromNameServer Exception
-org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to <null> failed
-	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:392)
-	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1331)
-	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getDefaultTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1315)
-	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:618)
-	at org.apache.rocketmq.client.impl.producer.DefaultMQProducerImpl.tryToFindTopicPublishInfo(DefaultMQProducerImpl.java:677)
-	at org.apache.rocketmq.client.impl.producer.DefaultMQProducerImpl.sendDefaultImpl(DefaultMQProducerImpl.java:530)
-	at org.apache.rocketmq.client.impl.producer.DefaultMQProducerImpl.send(DefaultMQProducerImpl.java:1310)
-	at org.apache.rocketmq.client.impl.producer.DefaultMQProducerImpl.send(DefaultMQProducerImpl.java:1256)
-	at org.apache.rocketmq.client.producer.DefaultMQProducer.send(DefaultMQProducer.java:339)
-	at org.apache.rocketmq.example.quickstart.Producer.main(Producer.java:67)
+[root@localhost ~]# cat /etc/systemd/system/rocketmq.service 
+[Unit]
+Description=RocketMQ Server
+[Service]
+Environment="JAVA_HOME=/usr/local/jdk/jdk1.8.0_171"
+ExecStartPre = /bin/sleep 30
+ExecStart = /bin/bash -c "/usr/local/rocketmq/bin/mqnamesrv -n localhost:9876 && /usr/local/rocketmq/bin/mqbroker -n localhost:9876 -c /usr/local/rocketmq/conf/broker.conf"
+User=rocketmq
+Type=simple
+Restart=always
+RestartSec=5s
+[Install]
+WantedBy=multi-user.target
 
-2023-05-17 22:16:31,031 INFO RocketmqRemoting - name server address updated. NEW : [localhost:9876] , OLD: null
-2023-05-17 22:16:31,031 INFO RocketmqClient - user specified name server address: localhost:9876
-2023-05-17 22:16:31,031 INFO RocketmqClient - Created a new client Instance, InstanceIndex:0, ClientID:192.168.31.136@1684332991402, ClientConfig:ClientConfig [namesrvAddr=localhost:9876, clientIP=192.168.31.136, instanceName=1684332991402, clientCallbackExecutorThreads=1, pollNameServerInterval=30000, heartbeatBrokerInterval=30000, persistConsumerOffsetInterval=5000, unitMode=false, unitName=null, vipChannelEnabled=false, useTLS=false, language=JAVA, namespace=null], ClientVersion:V4_5_2, SerializerType:JSON
-2023-05-17 22:16:31,031 INFO RocketmqClient - Created new MQClientInstance for clientId:[192.168.31.136@1684332991402]
-2023-05-17 22:16:31,031 INFO RocketmqCommon - Try to start service thread:PullMessageService started:false lastThread:null
-2023-05-17 22:16:31,031 INFO RocketmqCommon - Try to start service thread:RebalanceService started:false lastThread:null
-2023-05-17 22:16:31,031 INFO RocketmqClient - PullMessageService service started
-2023-05-17 22:16:31,031 INFO RocketmqClient - the producer [CLIENT_INNER_PRODUCER] start OK. sendMessageWithVIPChannel=false
-2023-05-17 22:16:31,031 INFO RocketmqClient - the client factory [192.168.31.136@1684332991402] start OK
-2023-05-17 22:16:31,031 INFO RocketmqClient - the adminExt [admin_ext_group] start OK
-2023-05-17 22:16:31,031 INFO RocketmqRemoting - new name server is chosen. OLD: null , NEW: localhost:9876. namesrvIndex = 470
-2023-05-17 22:16:31,031 INFO RocketmqClient - RebalanceService service started
-2023-05-17 22:16:31,031 DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: unpooled
-2023-05-17 22:16:31,031 DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 65536
-2023-05-17 22:16:31,031 DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
-2023-05-17 22:16:31,031 DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: unpooled
-2023-05-17 22:16:31,031 DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 65536
-2023-05-17 22:16:31,031 DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
-2023-05-17 22:16:31,031 DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: unpooled
-2023-05-17 22:16:31,031 DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 65536
-2023-05-17 22:16:31,031 DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
-2023-05-17 22:16:31,031 INFO RocketmqRemoting - createChannel: begin to connect remote host[localhost:9876] asynchronously
-2023-05-17 22:16:31,031 DEBUG io.netty.util.internal.JavassistTypeParameterMatcherGenerator - Generated: io.netty.util.internal.__matchers__.org.apache.rocketmq.remoting.protocol.RemotingCommandMatcher
-2023-05-17 22:16:31,031 DEBUG io.netty.util.internal.JavassistTypeParameterMatcherGenerator - Generated: io.netty.util.internal.__matchers__.org.apache.rocketmq.remoting.protocol.RemotingCommandMatcher
-2023-05-17 22:16:31,031 DEBUG io.netty.util.internal.JavassistTypeParameterMatcherGenerator - Generated: io.netty.util.internal.__matchers__.org.apache.rocketmq.remoting.protocol.RemotingCommandMatcher
-2023-05-17 22:16:31,031 INFO RocketmqRemoting - NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => ocalhost/127.0.0.1:9876
-2023-05-17 22:16:31,031 INFO RocketmqRemoting - createChannel: connect remote host[localhost:9876] success, DefaultChannelPromise@4550bb58(success)
-2023-05-17 22:16:32,032 DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@30c00d54
-2023-05-17 22:16:32,032 DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@30c00d54
-2023-05-17 22:16:32,032 DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@30c00d54
-2023-05-17 22:16:32,032 INFO RocketmqClient - the producer [CLIENT_INNER_PRODUCER] shutdown OK
-2023-05-17 22:16:32,032 INFO RocketmqCommon - Try to shutdown service thread:PullMessageService started:true lastThread:Thread[PullMessageService,5,main]
-2023-05-17 22:16:32,032 INFO RocketmqCommon - shutdown thread PullMessageService interrupt true
-2023-05-17 22:16:32,032 INFO RocketmqClient - PullMessageService service end
-2023-05-17 22:16:32,032 INFO RocketmqCommon - join thread PullMessageService elapsed time(ms) 7 90000
-2023-05-17 22:16:32,032 INFO RocketmqRemoting - closeChannel: begin close the channel[127.0.0.1:9876] Found: false
-2023-05-17 22:16:32,032 INFO RocketmqRemoting - closeChannel: the channel[127.0.0.1:9876] has been removed from the channel table before
-2023-05-17 22:16:32,032 INFO RocketmqRemoting - shutdown thread NettyEventExecutor interrupt false
-2023-05-17 22:16:32,032 INFO RocketmqRemoting - join thread NettyEventExecutor elapsed time(ms) 0 90000
-2023-05-17 22:16:32,032 INFO RocketmqRemoting - NETTY CLIENT PIPELINE: CLOSE 127.0.0.1:9876
-2023-05-17 22:16:32,032 INFO RocketmqRemoting - eventCloseChannel: the channel[null] has been removed from the channel table before
-2023-05-17 22:16:32,032 INFO RocketmqRemoting - closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
-2023-05-17 22:16:32,032 INFO RocketmqCommon - Try to shutdown service thread:RebalanceService started:true lastThread:Thread[RebalanceService,5,main]
-2023-05-17 22:16:32,032 INFO RocketmqCommon - shutdown thread RebalanceService interrupt false
-2023-05-17 22:16:32,032 INFO RocketmqClient - RebalanceService service end
-2023-05-17 22:16:32,032 INFO RocketmqClient - the client factory [192.168.31.136@1684332991402] shutdown OK
-2023-05-17 22:16:32,032 INFO RocketmqClient - the adminExt [admin_ext_group] shutdown OK
-2023-05-17 22:16:32,032 INFO RocketmqCommon - join thread RebalanceService elapsed time(ms) 3 90000
-2023-05-17 22:18:41,041 INFO RocketmqRemoting - name server address updated. NEW : [localhost:9876] , OLD: null
-2023-05-17 22:18:41,041 INFO RocketmqClient - user specified name server address: localhost:9876
-2023-05-17 22:18:41,041 INFO RocketmqClient - Created a new client Instance, InstanceIndex:0, ClientID:192.168.31.136@1684333120953, ClientConfig:ClientConfig [namesrvAddr=localhost:9876, clientIP=192.168.31.136, instanceName=1684333120953, clientCallbackExecutorThreads=1, pollNameServerInterval=30000, heartbeatBrokerInterval=30000, persistConsumerOffsetInterval=5000, unitMode=false, unitName=null, vipChannelEnabled=false, useTLS=false, language=JAVA, namespace=null], ClientVersion:V4_5_2, SerializerType:JSON
-2023-05-17 22:18:41,041 INFO RocketmqClient - Created new MQClientInstance for clientId:[192.168.31.136@1684333120953]
-2023-05-17 22:18:41,041 INFO RocketmqCommon - Try to start service thread:PullMessageService started:false lastThread:null
-2023-05-17 22:18:41,041 INFO RocketmqCommon - Try to start service thread:RebalanceService started:false lastThread:null
-2023-05-17 22:18:41,041 INFO RocketmqClient - PullMessageService service started
-2023-05-17 22:18:41,041 INFO RocketmqClient - the producer [CLIENT_INNER_PRODUCER] start OK. sendMessageWithVIPChannel=false
-2023-05-17 22:18:41,041 INFO RocketmqClient - the client factory [192.168.31.136@1684333120953] start OK
-2023-05-17 22:18:41,041 INFO RocketmqClient - the adminExt [admin_ext_group] start OK
-2023-05-17 22:18:41,041 INFO RocketmqRemoting - new name server is chosen. OLD: null , NEW: localhost:9876. namesrvIndex = 967
-2023-05-17 22:18:41,041 INFO RocketmqClient - RebalanceService service started
-2023-05-17 22:18:41,041 DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: unpooled
-2023-05-17 22:18:41,041 DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 65536
-2023-05-17 22:18:41,041 DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
-2023-05-17 22:18:41,041 DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: unpooled
-2023-05-17 22:18:41,041 DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 65536
-2023-05-17 22:18:41,041 DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
-2023-05-17 22:18:41,041 DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: unpooled
-2023-05-17 22:18:41,041 DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 65536
-2023-05-17 22:18:41,041 DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
-2023-05-17 22:18:41,041 INFO RocketmqRemoting - createChannel: begin to connect remote host[localhost:9876] asynchronously
-2023-05-17 22:18:41,041 DEBUG io.netty.util.internal.JavassistTypeParameterMatcherGenerator - Generated: io.netty.util.internal.__matchers__.org.apache.rocketmq.remoting.protocol.RemotingCommandMatcher
-2023-05-17 22:18:41,041 DEBUG io.netty.util.internal.JavassistTypeParameterMatcherGenerator - Generated: io.netty.util.internal.__matchers__.org.apache.rocketmq.remoting.protocol.RemotingCommandMatcher
-2023-05-17 22:18:41,041 DEBUG io.netty.util.internal.JavassistTypeParameterMatcherGenerator - Generated: io.netty.util.internal.__matchers__.org.apache.rocketmq.remoting.protocol.RemotingCommandMatcher
-2023-05-17 22:18:41,041 INFO RocketmqRemoting - NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => ocalhost/127.0.0.1:9876
-2023-05-17 22:18:41,041 INFO RocketmqRemoting - createChannel: connect remote host[localhost:9876] success, DefaultChannelPromise@4550bb58(success)
-2023-05-17 22:18:41,041 DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@1f7139c6
-2023-05-17 22:18:41,041 DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@1f7139c6
-2023-05-17 22:18:41,041 DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@1f7139c6
-2023-05-17 22:18:41,041 INFO RocketmqClient - the producer [CLIENT_INNER_PRODUCER] shutdown OK
-2023-05-17 22:18:41,041 INFO RocketmqCommon - Try to shutdown service thread:PullMessageService started:true lastThread:Thread[PullMessageService,5,main]
-2023-05-17 22:18:41,041 INFO RocketmqCommon - shutdown thread PullMessageService interrupt true
-2023-05-17 22:18:41,041 INFO RocketmqClient - PullMessageService service end
-2023-05-17 22:18:41,041 INFO RocketmqRemoting - closeChannel: begin close the channel[127.0.0.1:9876] Found: false
-2023-05-17 22:18:41,041 INFO RocketmqRemoting - closeChannel: the channel[127.0.0.1:9876] has been removed from the channel table before
-2023-05-17 22:18:41,041 INFO RocketmqRemoting - shutdown thread NettyEventExecutor interrupt false
-2023-05-17 22:18:41,041 INFO RocketmqRemoting - join thread NettyEventExecutor elapsed time(ms) 0 90000
-2023-05-17 22:18:41,041 INFO RocketmqCommon - join thread PullMessageService elapsed time(ms) 4 90000
-2023-05-17 22:18:41,041 INFO RocketmqRemoting - NETTY CLIENT PIPELINE: CLOSE 127.0.0.1:9876
-2023-05-17 22:18:41,041 INFO RocketmqRemoting - eventCloseChannel: the channel[null] has been removed from the channel table before
-2023-05-17 22:18:41,041 INFO RocketmqRemoting - closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
-2023-05-17 22:18:41,041 INFO RocketmqCommon - Try to shutdown service thread:RebalanceService started:true lastThread:Thread[RebalanceService,5,main]
-2023-05-17 22:18:41,041 INFO RocketmqCommon - shutdown thread RebalanceService interrupt false
-2023-05-17 22:18:41,041 INFO RocketmqClient - RebalanceService service end
-2023-05-17 22:18:41,041 INFO RocketmqCommon - join thread RebalanceService elapsed time(ms) 2 90000
-2023-05-17 22:18:41,041 INFO RocketmqClient - the client factory [192.168.31.136@1684333120953] shutdown OK
-2023-05-17 22:18:41,041 INFO RocketmqClient - the adminExt [admin_ext_group] shutdown OK
+[root@localhost ~]# ps -ef | grep rocketmq
+rocketmq   1691      1  0 10:34 ?        00:00:00 /bin/bash -c /usr/local/rocketmq/bin/mqnamesrv -n localhost:9876 && /usr/local/rocketmq/bin/mqbroker -n localhost:9876 -c /usr/local/rocketmq/conf/broker.conf
+rocketmq   1694   1691  0 10:34 ?        00:00:00 /bin/sh /usr/local/rocketmq/bin/mqnamesrv -n localhost:9876
+rocketmq   1698   1694  0 10:34 ?        00:00:00 sh /usr/local/rocketmq/bin/runserver.sh org.apache.rocketmq.namesrv.NamesrvStartup -n localhost:9876
+rocketmq   1701   1698  2 10:34 ?        00:00:02 /usr/local/jdk/jdk1.8.0_171/bin/java -server -Xms256m -Xmx256m -Xmn128m -XX:MetaspaceSize=64m -XX:MaxMetaspaceSize=128m -XX:+UseConcMarkSweepGC -XX:+UseCMSCompactAtFullCollection -XX:CMSInitiatingOccupancyFraction=70 -XX:+CMSParallelRemarkEnabled -XX:SoftRefLRUPolicyMSPerMB=0 -XX:+CMSClassUnloadingEnabled -XX:SurvivorRatio=8 -XX:-UseParNewGC -verbose:gc -Xloggc:/dev/shm/rmq_srv_gc_%p_%t.log -XX:+PrintGCDetails -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=30m -XX:-OmitStackTraceInFastThrow -XX:-UseLargePages -Djava.ext.dirs=/usr/local/jdk/jdk1.8.0_171/jre/lib/ext:/usr/local/rocketmq/bin/../lib -cp .:/usr/local/rocketmq/bin/../conf: org.apache.rocketmq.namesrv.NamesrvStartup -n localhost:9876
+root       1816   1771  0 10:36 pts/0    00:00:00 grep --color=auto rocketmq
+[root@localhost ~]# sudo systemctl status rocketmq.service
+● rocketmq.service - RocketMQ Server
+   Loaded: loaded (/etc/systemd/system/rocketmq.service; enabled; vendor preset: disabled)
+   Active: active (running) since 四 2023-05-18 10:34:45 CST; 5min ago
+  Process: 567 ExecStartPre=/bin/sleep 30 (code=exited, status=0/SUCCESS)
+ Main PID: 1691 (bash)
+    Tasks: 34
+   CGroup: /system.slice/rocketmq.service
+           ├─1691 /bin/bash -c /usr/local/rocketmq/bin/mqnamesrv -n localhost:9876 && /usr/local/rocketmq/bin/mqbroker -n localhost:9876 -c /usr/local/rocketmq/conf...
+           ├─1694 /bin/sh /usr/local/rocketmq/bin/mqnamesrv -n localhost:9876
+           ├─1698 sh /usr/local/rocketmq/bin/runserver.sh org.apache.rocketmq.namesrv.NamesrvStartup -n localhost:9876
+           └─1701 /usr/local/jdk/jdk1.8.0_171/bin/java -server -Xms256m -Xmx256m -Xmn128m -XX:MetaspaceSize=64m -XX:MaxMetaspaceSize=128m -XX:+UseConcMarkSweepGC -X...
+
+5月 18 10:34:14 localhost.localdomain systemd[1]: Starting RocketMQ Server...
+5月 18 10:34:45 localhost.localdomain systemd[1]: Started RocketMQ Server.
+5月 18 10:34:45 localhost.localdomain bash[1691]: Java HotSpot(TM) 64-Bit Server VM warning: Using the DefNew young collector with the CMS collector is de...e release
+5月 18 10:34:45 localhost.localdomain bash[1691]: Java HotSpot(TM) 64-Bit Server VM warning: UseCMSCompactAtFullCollection is deprecated and will likely b... release.
+5月 18 10:34:49 localhost.localdomain bash[1691]: The Name Server boot success. serializeType=JSON
+Hint: Some lines were ellipsized, use -l to show in full.
+
+[root@localhost ~]# cat /usr/local/rocketmq/conf/broker.conf 
+# RocketMQ NameServer 地址，多个地址用 ; 分隔
+namesrvAddr=127.0.0.1:9876
+
+brokerClusterName = DefaultCluster
+brokerName = broker-a
+brokerId = 0
+deleteWhen = 04
+fileReservedTime = 48
+brokerRole = ASYNC_MASTER
+flushDiskType = ASYNC_FLUSH
+autoCreateTopicEnable=true
+
+brokerIP1=127.0.0.1 #请将此替换为您的 IP 地址
+listenerPort=9876
+
+这是我的配置与启动信息，但是我找不主题信息
+
+Java代码：
+package com.itheima.springboot1.controller.onetoone2;
+
+import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
+import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;
+import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;
+import org.apache.rocketmq.client.consumer.listener.MessageListenerConcurrently;
+import org.apache.rocketmq.common.consumer.ConsumeFromWhere;
+import org.apache.rocketmq.common.message.Message;
+import org.apache.rocketmq.common.message.MessageExt;
+import org.apache.rocketmq.common.message.MessageQueue;
+import org.apache.rocketmq.common.protocol.heartbeat.MessageModel;
+
+import java.util.List;
+
+public class Consumer {
+    public static void main(String[] args) throws Exception {
+        // 创建一个消息消费者
+        DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("example_group");
+
+        // 设置 Namesrv 地址信息
+        consumer.setNamesrvAddr("192.168.31.133:9876");
+        // 订阅一个主题，可以使用通配符进行选择
+        consumer.subscribe("TopicA", "*");
+
+        // 设置消费者起始位置为最后位置
+        consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_LAST_OFFSET);
+
+        // 注册回调函数，用于处理从 Broker 拉取到的消息
+        consumer.registerMessageListener((MessageListenerConcurrently) (msgs, context) -> {
+            System.out.printf("%s Receive New Messages: %s %n", Thread.currentThread().getName(), msgs);
+            return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
+        });
+
+        // 启动消费者
+        consumer.start();
+
+        System.out.printf("Consumer Started.%n");
+    }
+}
