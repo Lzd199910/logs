@@ -96,3 +96,8 @@ public class Consumer {
         System.out.printf("Consumer Started.%n");
     }
 }
+
+[root@localhost bin]# sh mqadmin topicList -n localhost:9876
+RocketMQLog:WARN No appenders could be found for logger (io.netty.util.internal.PlatformDependent0).
+RocketMQLog:WARN Please initialize the logger system properly.
+[root@localhost bin]# 
